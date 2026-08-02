@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/supervisorBottomNav"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/supervisor_bottom_nav_bg"
+    android:elevation="14dp"
+    android:layoutDirection="ltr"
+    android:minHeight="68dp"
+    android:paddingStart="14dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="14dp"
+    android:paddingBottom="10dp">
+
+    <FrameLayout
+        android:id="@+id/navHistorySlot"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/navHistoryIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:background="@drawable/supervisor_nav_icon_circle"
+            android:contentDescription="@string/supervisor_nav_history"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_nav_history"
+            app:tint="@color/intro_primary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/navHistoryPill"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/iran_sans"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="120dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="20dp"
+            android:text="@string/supervisor_nav_history"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:backgroundTint="@color/intro_primary"
+            app:cornerRadius="28dp"
+            app:elevation="0dp"
+            app:icon="@drawable/ic_nav_history"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconSize="22dp"
+            app:iconTint="@color/white"
+            app:strokeWidth="0dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/navTodaySlot"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/navHomeSlot"
+        app:layout_constraintStart_toEndOf="@id/navHistorySlot"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/navTodayIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:background="@drawable/supervisor_nav_icon_circle"
+            android:contentDescription="@string/supervisor_nav_today"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_nav_schedule"
+            app:tint="@color/intro_primary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/navTodayPill"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/iran_sans"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="148dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:text="@string/supervisor_nav_today"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:backgroundTint="@color/intro_primary"
+            app:cornerRadius="28dp"
+            app:elevation="0dp"
+            app:icon="@drawable/ic_nav_schedule"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconSize="22dp"
+            app:iconTint="@color/white"
+            app:strokeWidth="0dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/navHomeSlot"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/navHomeIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:background="@drawable/supervisor_nav_icon_circle"
+            android:contentDescription="@string/supervisor_nav_home"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_nav_home"
+            app:tint="@color/intro_primary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/navHomePill"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/iran_sans"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="120dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="22dp"
+            android:text="@string/supervisor_nav_home"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:backgroundTint="@color/intro_primary"
+            app:cornerRadius="28dp"
+            app:elevation="0dp"
+            app:icon="@drawable/ic_nav_home"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconSize="22dp"
+            app:iconTint="@color/white"
+            app:strokeWidth="0dp" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

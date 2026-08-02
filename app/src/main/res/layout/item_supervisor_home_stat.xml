@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@drawable/supervisor_home_stat_card"
+    android:clickable="true"
+    android:elevation="2dp"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="8dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="14dp">
+
+    <ImageView
+        android:id="@+id/statIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@null"
+        android:src="@drawable/intro_clipboard"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/statTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/iran_sans"
+        android:gravity="center"
+        android:textColor="@color/login_label"
+        android:textSize="12sp"
+        tools:text="وظایف روزانه" />
+
+    <TextView
+        android:id="@+id/statCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/iran_sans"
+        android:gravity="center"
+        android:textColor="@color/text_secondary_dark"
+        android:textSize="11sp"
+        tools:text="۱۲ مورد" />
+</LinearLayout>

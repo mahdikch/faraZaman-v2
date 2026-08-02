@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/brand_green"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Zone Name/Organ -->
+        <TextView
+            android:id="@+id/zone_organ_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="منطقه: شهرداری رشت منطقه 1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/iran_sans"
+            android:textColor="@color/brand_green_dark" />
+
+        <!-- Vehicle Plate -->
+        <TextView
+            android:id="@+id/zone_vehicle_plate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="پلاک: 111ب11"
+            android:textSize="14sp"
+            android:fontFamily="@font/iran_sans"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp" />
+
+        <!-- Contract Info -->
+        <TextView
+            android:id="@+id/zone_contract_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="قرارداد: 5568"
+            android:textSize="14sp"
+            android:fontFamily="@font/iran_sans"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp"
+            android:visibility="gone" />
+
+        <!-- Shift Info -->
+        <TextView
+            android:id="@+id/zone_shift_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="شیفت: 24 ساعته"
+            android:textSize="14sp"
+            android:fontFamily="@font/iran_sans"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

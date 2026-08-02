@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:background="@drawable/loading_background">
+
+        <!-- Logo with rotation animation -->
+        <ImageView
+            android:id="@+id/loading_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/farazaman_logo"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Farazaman Logo" />
+
+        <!-- Loading text -->
+        <TextView
+            android:id="@+id/loading_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="در حال بارگذاری..."
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:fontFamily="@font/iran_sans"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Progress bar -->
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/brand_green_dark" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoadingCancel"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/menu_cancel"
+            android:textColor="@color/brand_green_dark"
+            android:fontFamily="@font/iran_sans"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</FrameLayout> 

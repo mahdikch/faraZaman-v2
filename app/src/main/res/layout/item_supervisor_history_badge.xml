@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/statusBadge"
+
+    android:layout_width="wrap_content"
+
+    android:layout_height="wrap_content"
+
+    android:layout_marginEnd="6dp"
+
+    android:layout_marginBottom="6dp"
+
+    android:fontFamily="@font/iran_sans"
+
+    android:paddingStart="10dp"
+
+    android:paddingTop="4dp"
+
+    android:paddingEnd="10dp"
+
+    android:paddingBottom="4dp"
+
+    android:textSize="11sp"
+
+    android:textStyle="bold"
+
+    tools:background="@drawable/daily_plan_status_not_reviewed"
+
+    tools:text="۲ ثبت شده"
+
+    tools:textColor="@color/daily_plan_status_amber" />
+

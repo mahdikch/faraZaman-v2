@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/detailLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/iran_sans"
+        android:textAlignment="viewStart"
+        android:textDirection="rtl"
+        android:textColor="@color/text_secondary_dark"
+        android:textSize="13sp"
+        tools:text="تاریخ ثبت عملکرد :" />
+
+    <TextView
+        android:id="@+id/detailValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/iran_sans"
+        android:textAlignment="viewStart"
+        android:textDirection="rtl"
+        android:textColor="@color/login_label"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="۱۴۰۴/۰۹/۰۱" />
+
+    <View
+        android:id="@+id/detailDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/supervisor_info_row_divider" />
+</LinearLayout>
