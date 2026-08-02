@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="انتخاب محدوده کاری"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/iran_sans"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:textColor="@color/brand_green_dark" />
+
+    <!-- Loading Progress -->
+    <ProgressBar
+        android:id="@+id/loading_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminateTint="@color/brand_green" />
+
+    <!-- Empty View -->
+    <LinearLayout
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="هیچ محدوده کاری یافت نشد"
+            android:textSize="16sp"
+            android:fontFamily="@font/iran_sans"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="لطفاً با مدیر سیستم تماس بگیرید"
+            android:textSize="14sp"
+            android:fontFamily="@font/iran_sans"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+    <!-- RecyclerView for Zone List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/zones_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="400dp"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
+

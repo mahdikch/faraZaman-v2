@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_top_background"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingTop="12dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="24dp">
+
+    <View
+        android:layout_width="48dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bottom_sheet_handle" />
+
+    <TextView
+        android:id="@+id/endMissionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/iran_sans"
+        android:gravity="center"
+        android:text="@string/end_mission_title"
+        android:textColor="@color/login_label"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/endMissionMessage1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/iran_sans"
+        android:gravity="center"
+        android:lineSpacingExtra="6dp"
+        android:text="@string/end_mission_message_remove"
+        android:textColor="@color/text_secondary_dark"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/endMissionMessage2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/iran_sans"
+        android:gravity="center"
+        android:text="@string/end_mission_message_confirm"
+        android:textColor="@color/text_secondary_dark"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnEndMissionCancel"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/end_mission_btn_cancel"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/iran_sans"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/end_mission_cancel"
+            android:textColor="#E53935"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnEndMissionConfirm"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/end_mission_btn_confirm"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/iran_sans"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/end_mission_confirm"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
