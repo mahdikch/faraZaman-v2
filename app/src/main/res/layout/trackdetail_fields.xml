@@ -1,0 +1,70 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/trackdetail_item_name_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="outline"
+        android:layout_margin="5dp"
+        app:boxStrokeColor="#1E88E5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/trackdetail_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/trackdetail_name"
+            android:fontFamily="@font/iran_sans"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/trackdetail_item_description_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trackdetail_item_name_lay"
+        app:boxBackgroundMode="outline"
+        android:layout_margin="5dp"
+        app:boxStrokeColor="#1E88E5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/trackdetail_item_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/trackdetail_description"
+            android:fontFamily="@font/iran_sans"
+            android:inputType="text"
+            android:singleLine="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/trackdetail_item_tags_lay"
+        android:layout_width="fill_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trackdetail_item_description"
+        app:boxBackgroundMode="outline"
+        android:layout_margin="5dp"
+        app:boxStrokeColor="#1E88E5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/trackdetail_item_tags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/trackdetail_tags"
+            android:fontFamily="@font/iran_sans"
+            android:inputType="text"
+            android:singleLine="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Spinner
+        android:visibility="gone"
+        android:id="@+id/trackdetail_item_osm_visibility"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trackdetail_item_tags" />
+</LinearLayout>
+</merge>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryText">
+
+
+
+    <Ir.co.tfs.farazaman.layout.GpsStatusRecord
+        android:id="@+id/gpsStatus"
+        android:paddingVertical="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/tracklogger_root"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="16dp"
+        android:orientation="vertical"></LinearLayout>
+</LinearLayout>

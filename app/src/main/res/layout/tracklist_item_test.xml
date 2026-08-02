@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:minHeight="72dp"
+        android:padding="5dp"
+        android:stateListAnimator="@null">
+
+        <LinearLayout
+            android:id="@+id/id_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageButton
+                android:id="@+id/trackmgr_item_options"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/baseline_more_vert_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/trackmgr_item_id_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="false"
+                android:padding="2dp"
+                android:text="#"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/trackmgr_item_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="false"
+                android:text="{id}"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/trackmgr_item_nameordate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:duplicateParentState="false"
+            android:ellipsize="none"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            app:layout_constraintEnd_toStartOf="@id/icons_container"
+            app:layout_constraintStart_toEndOf="@id/id_container"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/waypoints_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@id/id_container"
+            app:layout_constraintTop_toBottomOf="@id/trackmgr_item_nameordate">
+
+            <TextView
+                android:id="@+id/trackmgr_item_waypoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="false"
+                android:text="@string/trackmgr_waypoints_count"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/trackmgr_item_wps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:duplicateParentState="false"
+                android:text="{x}"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/trackmgr_item_trackpoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:duplicateParentState="false"
+            android:text="@string/trackmgr_trackpoints_count"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/id_container"
+            app:layout_constraintTop_toBottomOf="@id/waypoints_container" />
+
+        <TextView
+            android:id="@+id/trackmgr_item_tps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:duplicateParentState="false"
+            android:text="{y}"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            app:layout_constraintBottom_toBottomOf="@id/trackmgr_item_trackpoints"
+            app:layout_constraintStart_toEndOf="@id/trackmgr_item_trackpoints"
+            app:layout_constraintTop_toTopOf="@id/trackmgr_item_trackpoints" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icons_container"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:minWidth="48dp"
+            android:paddingHorizontal="4dp"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+            <ImageView
+                android:id="@+id/trackmgr_item_statusicon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@null"
+                android:contentDescription="@string/acc.track_status"
+                android:padding="2dp"
+                android:src="@android:drawable/presence_online"
+                android:stateListAnimator="@null"
+                app:layout_constraintBottom_toTopOf="@id/trackmgr_item_upload_statusicon"
+                app:layout_constraintEnd_toStartOf="@id/trackmgr_item_options"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/trackmgr_item_upload_statusicon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@null"
+                android:contentDescription="@string/acc.upload_status"
+                android:padding="2dp"
+                android:src="@android:drawable/stat_sys_upload_done"
+                android:stateListAnimator="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/trackmgr_item_options"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/trackmgr_item_statusicon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

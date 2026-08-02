@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent"
+	android:fitsSystemWindows="true">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/my_toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:background="@color/white"
+		android:elevation="4dp"
+		app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+		app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+		<TextView
+			android:id="@+id/toolbar_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:fontFamily="@font/iran_sans"
+			android:text="فرازمان"
+			android:textColor="@color/colorPrimaryTextLight"
+			android:textSize="18sp"
+			android:textStyle="bold" />
+
+	</androidx.appcompat.widget.Toolbar>
+
+
+
+	<androidx.coordinatorlayout.widget.CoordinatorLayout
+		android:layout_width="fill_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:padding="3dp">
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/recyclerview"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_marginBottom="8dp"
+			tools:listitem="@layout/tracklist_item" />
+
+		<LinearLayout
+			android:id="@+id/trackmgr_empty"
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:visibility="gone"
+			>
+
+			<ImageView
+				android:id="@+id/empty_image"
+				android:layout_width="200dp"
+				android:layout_height="200dp"
+				android:src="@drawable/empty_box"
+				android:layout_marginBottom="12dp" />
+
+			<TextView
+				android:id="@+id/empty_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="برنامه کاری وجود ندارد"
+				android:textSize="16sp"
+				android:textColor="@color/gray"
+				android:fontFamily="@font/iran_sans"/>
+			<com.google.android.material.button.MaterialButton
+				android:id="@+id/get_new_mission"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="دریافت برنامه کاری"
+				app:cornerRadius="4dp"
+				android:backgroundTint="@color/brand_green_dark"
+				android:layout_margin="8dp"
+				android:textColor="#FFFFFF"
+				android:fontFamily="@font/iran_sans"
+				android:padding="12dp" />
+		</LinearLayout>
+
+		<ProgressBar
+			android:id="@+id/upload_progressbar"
+			style="?android:attr/progressBarStyleHorizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom"
+			android:layout_marginBottom="60dp"
+			android:layout_marginStart="16dp"
+			android:layout_marginEnd="16dp"
+			android:indeterminate="true"
+			android:visibility="gone" />
+		<!--		<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--			android:id="@+id/trackmgr_fab"-->
+<!--			android:layout_width="wrap_content"-->
+<!--			android:layout_height="wrap_content"-->
+<!--			android:layout_gravity="end|bottom"-->
+<!--			android:layout_margin="16dp"-->
+<!--			android:contentDescription="@string/trackmgr_newtrack_hint"-->
+<!--			android:src="@drawable/ic_fab_add_track" />-->
+<LinearLayout
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_gravity="bottom"
+android:visibility="gone"
+	android:weightSum="2">
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/start_track"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="شروع ماموریت جدید"
+		app:cornerRadius="4dp"
+		android:backgroundTint="@color/brand_green_dark"
+		android:layout_margin="8dp"
+		android:textColor="#FFFFFF"
+		android:fontFamily="@font/iran_sans"
+		android:padding="12dp" />
+
+</LinearLayout>
+
+	</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

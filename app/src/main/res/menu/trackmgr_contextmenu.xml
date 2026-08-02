@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/trackmgr_contextmenu_display"
+        android:title="نمایش روی نقشه" />
+    <item
+        android:id="@+id/trackmgr_contextmenu_delete"
+        android:title="حذف" />
+    <item
+        android:id="@+id/trackmgr_contextmenu_export_gpx"
+        android:title="ذخیره GPX در حافظه"
+        android:icon="@android:drawable/ic_menu_save" />
+</menu>
