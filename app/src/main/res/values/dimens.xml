@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="supervisor_tab_spacing">10dp</dimen>
+    <dimen name="supervisor_tab_padding_h">18dp</dimen>
+    <dimen name="supervisor_tab_padding_v">10dp</dimen>
+    <dimen name="city_selection_item_height">72dp</dimen>
+</resources>

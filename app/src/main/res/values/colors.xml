@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application colors -->
+    <!-- https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=004D40 -->
+    <color name="colorPrimary">#004d40</color>
+    <color name="colorPrimaryDark">#00251a</color>
+    <color name="colorAccent">#39796b</color>
+    <color name="colorPrimaryText">#ffffff</color>
+    <color name="withe">#ffffff</color>
+    <color name="user_defined_button_text_color">#FFFF4081</color>
+    <color name="red">#FD3333</color>
+    <!-- Map buttons -->
+    <color name="btnBorder">#000000</color>
+    <color name="green">#00A884</color>
+    <color name="map_btnBackground">#19303234</color>
+    <color name="map_onClickBackground">#303234</color>
+    <!-- Login Screen Colors -->
+    <color name="text_dark">#212121</color>
+    <color name="icon_gray">#757575</color>
+    <color name="input_stroke">#E0E0E0</color>
+    <color name="button_gray">#EEEEEE</color>
+
+
+    <!-- Light Base application colors -->
+    <!-- https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=80CBC4 -->
+    <color name="colorPrimaryLight">#80cbc4</color>
+    <color name="colorPrimaryDarkLight">#4f9a94</color>
+    <color name="colorAccentLight">#b2fef7</color>
+    <color name="colorPrimaryTextLight">#000000</color>
+    <color name="black">#000000</color>
+    <color name="gray">#949494</color>
+    <color name="gray_disabled">#BDBDBD</color>
+
+    <color name="brand_green">#00A98F</color>
+    <color name="stop">#f58a07</color>
+    <color name="brand_green_dark">#008772</color>
+    <color name="text_primary_dark">#212121</color>
+    <color name="text_secondary_dark">#757575</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Supervisor header / page green -->
+    <color name="supervisor_header_green">#005144</color>
+
+    <!-- Intro / onboarding -->
+    <color name="intro_primary">#0B5E56</color>
+    <color name="intro_text">#0A3D3B</color>
+    <color name="intro_text_secondary">#3D5C59</color>
+    <color name="intro_dot_inactive">#B8D9D5</color>
+
+    <!-- Supervisor mission hold ring -->
+    <color name="supervisor_mission_ring">#05493E</color>
+
+    <!-- Daily plan item status -->
+    <color name="daily_plan_status_blue">#1565C0</color>
+    <color name="daily_plan_status_amber">#F57C00</color>
+
+    <!-- Login -->
+    <color name="login_button">#0A2E26</color>
+    <color name="login_label">#212121</color>
+</resources>

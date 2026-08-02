@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:fontFamily">@font/iran_sans</item>
+<!--      Customize your theme here.-->
+        <item name="colorPrimary">@color/green</item>
+<!--        <item name="colorPrimary">@color/colorPrimaryText</item>-->
+<!--        <item name="colorPrimary">@color/colorPrimaryDark</item>-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/green</item>
+        <item name="background">@color/green</item>
+        <item name="backgroundColor">@color/green</item>
+        <item name="materialAlertDialogBodyTextStyle">@color/green</item>
+
+
+
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here
+        <item name="colorPrimary">@color/colorPrimaryLight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkLight</item>
+        <item name="colorAccent">@color/colorAccentLight</item>
+        -->
+    </style>
+    <style name="SupervisorTabText" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:fontFamily">@font/iran_sans</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TrackLoggerTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryText</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="background">@color/colorPrimaryText</item>
+        <item name="backgroundColor">@color/colorPrimaryText</item>
+        <item name="android:fontFamily">@font/iran_sans</item>
+    </style>
+
+    <!-- RTL Preferences Theme -->
+    <style name="PreferencesRTLTheme" parent="Theme.AppCompat.Light">
+        <item name="android:fontFamily">@font/iran_sans</item>
+        <item name="android:layoutDirection">rtl</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textDirection">rtl</item>
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/green</item>
+    </style>
+
+</resources>
