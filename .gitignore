@@ -24,3 +24,6 @@ app/src/test/assets/gpx/output-test.gpx
 key/
 *.jks
 *.keystore
+README_PROBE.md
+allfiles.txt
+key/
