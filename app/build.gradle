@@ -1,0 +1,163 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'jacoco'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'Ir.co.tfs.farazaman'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "Ir.co.tfs.farazaman"
+        minSdk 23
+        targetSdk 34
+        multiDexEnabled true
+
+        // Version code should be increased after each release
+        versionCode 65
+        versionName new Date().format('yyyy.MM.dd')
+
+        testApplicationId "Ir.co.tfs.farazaman.test"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.findByName('release')
+        }
+        debug {
+            versionNameSuffix "-dev"
+        }
+    }
+    
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+        disable 'ExtraTranslation'
+        disable 'HardcodedText'
+        disable 'UnusedResources'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17
+    }
+
+    signingConfigs {
+        if (project.hasProperty('signing.storeFile')) {
+            release {
+                storeFile file(project.property('signing.storeFile'))
+                storePassword project.property('signing.storePassword')
+                keyAlias project.property('signing.keyAlias')
+                keyPassword project.property('signing.keyPassword')
+            }
+        }
+    }
+
+    packagingOptions {
+        resources.excludes += [
+            'META-INF/DEPENDENCIES', 
+            'META-INF/LICENSE.txt', 
+            'META-INF/NOTICE.txt'
+        ]
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+        unitTests.all {
+            it.jvmArgs = [
+                '--add-opens', 'java.base/java.io=ALL-UNNAMED',
+                       '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+                       '--add-opens', 'java.base/java.lang.reflect=ALL-UNNAMED',
+                       '--add-opens', 'java.base/java.util=ALL-UNNAMED'
+            ]
+        }
+        animationsDisabled = true
+    }
+}
+
+dependencies {
+    // Lib to show OSM map as background
+    implementation 'org.osmdroid:osmdroid-android:6.1.20'
+    // OAuth / OIDC
+    implementation 'net.openid:appauth:0.11.1'
+    // For upload traces to osm server
+    implementation('de.westnordost:osmapi-traces:3.1') {
+        // Already included in Android
+        exclude group: 'net.sf.kxml', module: 'kxml2'
+        exclude group: 'xmlpull', module: 'xmlpull'
+    }
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'org.slf4j:slf4j-android:1.7.30'
+    implementation 'org.apache.commons:commons-io:1.3.2'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.22"
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.activity:activity-ktx:1.8.2'
+    implementation 'androidx.media3:media3-transformer:1.1.1'
+    // Required -- JUnit 4 framework
+    testImplementation 'junit:junit:4.13.2'
+    // Robolectric environment
+    testImplementation "androidx.test:core:1.5.0"
+    // Mockito framework
+    testImplementation "org.mockito:mockito-core:5.14.1"
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+    testImplementation 'org.powermock:powermock-core:2.0.9'
+    testImplementation 'org.powermock:powermock-api-mockito2:2.0.9'
+    testImplementation 'org.powermock:powermock-module-junit4:2.0.9'
+    // Required for local unit tests. Prevent null in JSONObject, JSONArray, etc.
+    testImplementation 'org.json:json:20231013'
+    implementation 'com.github.samanzamani:PersianDate:1.7.1'
+    // Required for instrumented tests
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
+    implementation 'com.github.aliab:Persian-Date-Picker-Dialog:1.8.0'
+//    implementation 'com.github.dhaval2404:imagepicker-support:1.7.1'
+//    implementation 'com.github.Drjacky:ImagePicker:2.3.22'
+    implementation "com.leinardi.android:speed-dial:3.3.0"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.7.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0"
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:2.51"
+    kapt "com.google.dagger:hilt-compiler:2.51"
+    implementation 'androidx.hilt:hilt-navigation-compose:1.1.0'
+    implementation 'androidx.hilt:hilt-navigation:1.1.0'
+    implementation "io.coil-kt:coil:2.5.0"
+    implementation "io.coil-kt:coil-svg:2.5.0"
+    implementation files('libs/core-splashscreen-1.0.1.aar')}
+
+repositories {
+//    maven { url 'https://maven.aliyun.com/repository/google' }
+//    maven { url 'https://maven.aliyun.com/repository/central' }
+
+    google()
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+apply from: "jacoco.gradle"
+
+
